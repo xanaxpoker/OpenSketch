@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="850px" viewBox="0 0 375 850" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>One</title>
+    <desc>Created with OpenSketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FA8C34" stop-opacity="1" offset="0%"></stop>
+            <stop stop-color="#FABA32" stop-opacity="1" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FA8C34" stop-opacity="1" offset="0%"></stop>
+            <stop stop-color="#FABA32" stop-opacity="1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="One">
+        <g id="Content">
+            <path d="M0,3 C0,1.34 1.34,0 3,0 L372,0 C373.66,0 375,1.34 375,3 L375,715 C375,716.66 373.66,718 372,718 L3,718 C1.34,718 0,716.66 0,715 Z" id="Base" fill="#FFFFFF"></path>
+            <g id="Header" transform="translate(13, 19)">
+                <text id="Introducing Smart La" font-family="AvenirNext-DemiBold" font-size="21" fill="#000000" x="57" y="27">Introducing Smart Layout</text>
+                <g id="Badge" transform="translate(0, 0)">
+                    <path d="M7.86,34.14 C0.05,26.33 0.05,13.67 7.86,5.86 C15.67,-1.95 28.33,-1.95 36.14,5.86 C43.95,13.67 43.95,26.33 36.14,34.14 C28.33,41.95 15.67,41.95 7.86,34.14 Z" id=" " fill="url(#linearGradient-1)"></path>
+                    <path d="M5.86,36.14 C-1.95,28.33 -1.95,15.67 5.86,7.86 C13.67,0.05 26.33,0.05 34.14,7.86 C41.95,15.67 41.95,28.33 34.14,36.14 C26.33,43.95 13.67,43.95 5.86,36.14 Z" id=" " fill="none" stroke="#FAB732" stroke-width="1"></path>
+                    <text id="1" font-family="AvenirNext-Medium" font-size="21" fill="#FFFFFF" x="2" y="21">1</text>
+                </g>
+            </g>
+            <g id="Thumbnail" transform="translate(0, 78)">
+                <path d="M0,0 L375,0 L375,180 L0,180 L0,0 Z" id="Mask" fill="url(#linearGradient-2)"></path>
+                <g id="Shapes" transform="translate(-4, -47)">
+                    <path d="M118,79 C118,76.24 120.24,74 123,74 L260,74 C262.76,74 265,76.24 265,79 L265,105 C265,107.76 262.76,110 260,110 L123,110 C120.24,110 118,107.76 118,105 Z" id=" " fill="none" stroke="#FFFFFF" stroke-width="2"></path>
+                    <path d="M118,128 C118,125.24 120.24,123 123,123 L260,123 C262.76,123 265,125.24 265,128 L265,193 C265,195.76 262.76,198 260,198 L123,198 C120.24,198 118,195.76 118,193 Z" id=" " fill="none" stroke="#FFFFFF" stroke-width="2"></path>
+                    <path d="M0.50,110 L382.50,110" id=" " fill="none" stroke="#FFFFFF" stroke-width="2"></path>
+                    <path d="M0.50,123 L382.50,123" id=" " fill="none" stroke="#FFFFFF" stroke-width="2"></path>
+                    <path d="M0.50,198 L382.50,198" id=" " fill="none" stroke="#FFFFFF" stroke-width="2"></path>
+                    <path d="M118,0 L118,335" id=" " fill="none" stroke="#FFFFFF" stroke-width="2"></path>
+                    <path d="M265,0 L265,335" id=" " fill="none" stroke="#FFFFFF" stroke-width="2"></path>
+                    <path d="M0.50,74 L382.50,74" id=" " fill="none" stroke="#FFFFFF" stroke-width="2"></path>
+                </g>
+            </g>
+            <text id="This quick guide wil" font-family="AvenirNext-Regular" font-size="15" fill="#000000" x="20" y="293">This quick guide will give you an introduction to Sketch’s Smart Layout feature, which lets you create dynamic Symbols that expand when you edit their content.
+
+Once you’ve set up Smart Layout, changing an override in a Symbol’s instance will resize it automatically.
+
+Edit this button text override to see Smart Layout in action:</text>
+            <text id="Pretty cool, right?" font-family="AvenirNext-Regular" font-size="15" fill="#000000" x="20" y="644">Pretty cool, right? Smart Layout maintains the padding and spacing between layers in a Symbol when an override changes its size.</text>
+        </g>
+        <g id="Note" transform="translate(0, 758)">
+            <path d="M0,6 C0,2.69 2.69,0 6,0 L212,0 C215.31,0 218,2.69 218,6 L218,86 C218,89.31 215.31,92 212,92 L6,92 C2.69,92 0,89.31 0,86 Z" id="BG" fill="#FEFBF2" stroke="#000000" stroke-width="1"></path>
+            <text id="Note: If you don’t h" font-family="AvenirNext-DemiBold" font-size="14" fill="#000000" x="10" y="24">Note: If you don’t have the San Francisco font family installed, you can grab it at developer.apple.com/fonts/ </text>
+        </g>
+        <g id="Sample Button" transform="translate(125, 556)">
+            <path d="M0,8 C0,3.58 3.58,0 8,0 L117.60,0 C122.02,0 125.60,3.58 125.60,8 L125.60,40 C125.60,44.42 122.02,48 117.60,48 L8,48 C3.58,48 0,44.42 0,40 Z" id="Rectangle" fill="#027AFF"></path>
+            <text id="Button" font-family="AvenirNext-Medium" font-size="20" fill="#FFFFFF" x="25" y="30">Edit Me</text>
+        </g>
+    </g>
+</svg>

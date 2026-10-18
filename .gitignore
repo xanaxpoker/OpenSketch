@@ -1,0 +1,32 @@
+.DS_Store
+
+# Third-party reverse engineering tool installations & git clones
+tools/ghidra_12.1.4_PUBLIC/
+tools/rea-cli/node_modules/
+tools/downloads/
+rea/
+run-daemon.log
+
+# Extracted proprietary binary slices, Ghidra pseudocode, & raw binary/UI dumps
+thin/
+run/
+decomp/
+snapshots/
+traces/
+out/assets*
+out/demangled-*
+out/dispatch-*
+out/ib*
+out/inspect-*
+out/list-architectures.json
+out/macho-*
+out/swift-*
+out/trace-*
+out/ui-*
+out/variants/
+
+# Swift Package Manager & Rust Cargo build caches / local bundles
+OpenSketch/.build/
+OpenSketch/.swiftpm/
+OpenSketch/build/
+OpenSketchWindows/target/

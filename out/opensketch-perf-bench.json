@@ -1,0 +1,59 @@
+{
+  "allPassed" : true,
+  "bitmapCacheHits" : 99,
+  "checks" : [
+    {
+      "budgetMs" : 250,
+      "detail" : "Loaded 2 pages & 14 images in 42.22 ms",
+      "measuredMs" : 42.218000000000004,
+      "name" : "document_archive_load",
+      "passed" : true,
+      "title" : "ZIP Archive Load & Model Decode"
+    },
+    {
+      "budgetMs" : 8.3300000000000001,
+      "detail" : "Drew 311 layers in 2.40 ms (58 cache hits)",
+      "measuredMs" : 2.395,
+      "name" : "warm_canvas_frame_render",
+      "passed" : true,
+      "title" : "Warm Full-Canvas Render (120 FPS Target)"
+    },
+    {
+      "budgetMs" : 6,
+      "detail" : "Avg: 0.91 ms\/frame, P95: 2.52 ms\/frame (120 FPS)",
+      "measuredMs" : 0.91300000000000003,
+      "name" : "continuous_60_frame_pan_zoom",
+      "passed" : true,
+      "title" : "60-Frame Continuous Pan\/Zoom Stress Test"
+    },
+    {
+      "budgetMs" : 4,
+      "detail" : "Drew 19 layers, culled 156 off-screen layers in 0.41 ms",
+      "measuredMs" : 0.40999999999999998,
+      "name" : "viewport_frustum_culling",
+      "passed" : true,
+      "title" : "Viewport Frustum Culling Efficiency"
+    },
+    {
+      "budgetMs" : 5,
+      "detail" : "Expanded 1360 symbol ops in 1.996 ms (2099 cache hits)",
+      "measuredMs" : 1.996,
+      "name" : "symbol_master_smart_layout_cache",
+      "passed" : true,
+      "title" : "O(1) Symbol Master & Smart Layout Cache (20x)"
+    },
+    {
+      "budgetMs" : 4,
+      "detail" : "100 snap evaluations in 0.241 ms (0.0024 ms\/tick)",
+      "measuredMs" : 0.24099999999999999,
+      "name" : "interactive_hit_test_and_snap",
+      "passed" : true,
+      "title" : "Interactive Drag Snapping (100 ticks)"
+    }
+  ],
+  "file" : "\/Applications\/sidetabs\/Coding\/sketch-re\/samples\/smart-layout.sketch",
+  "passedCount" : 6,
+  "summary" : "Perf Checks: 6\/6 PASSED | Warm Frame: 2.40 ms (120 FPS) | 60-Frame Pan\/Zoom Avg: 0.91 ms",
+  "symbolCacheHits" : 2099,
+  "totalChecks" : 6
+}

@@ -1,0 +1,49 @@
+name: Build & Verify OpenSketch (Windows + macOS)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  windows-build-and-test:
+    name: Windows (x86_64-pc-windows-msvc)
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install stable Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Build OpenSketch for Windows (Release)
+        run: cargo build --release --manifest-path OpenSketchWindows/Cargo.toml
+
+      - name: Run 9 Unit, Integration & Performance Tests on Windows
+        run: cargo test --release --manifest-path OpenSketchWindows/Cargo.toml
+
+      - name: Run 6-Check 120 FPS Performance Suite on Windows
+        run: cargo run --release --manifest-path OpenSketchWindows/Cargo.toml --bin opensketch-win-cli -- bench samples/smart-layout.sketch
+
+      - name: Upload Windows Executables (opensketch-windows.exe & opensketch-win-cli.exe)
+        uses: actions/upload-artifact@v4
+        with:
+          name: OpenSketch-Windows-x64
+          path: |
+            OpenSketchWindows/target/release/opensketch-windows.exe
+            OpenSketchWindows/target/release/opensketch-win-cli.exe
+
+  macos-build-and-test:
+    name: macOS (Swift + AppKit + CoreGraphics)
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build & Run OpenSketch macOS Test Suite
+        run: swift test --package-path OpenSketch
+
+      - name: Run 6-Check 120 FPS Performance Suite on macOS
+        run: swift run --package-path OpenSketch opensketch-cli bench samples/smart-layout.sketch

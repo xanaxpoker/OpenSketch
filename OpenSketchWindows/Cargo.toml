@@ -1,0 +1,27 @@
+[package]
+name = "opensketch-windows"
+version = "1.0.0"
+edition = "2021"
+description = "Clean-room native Windows & cross-platform port of Sketch 82.1 (OpenSketch)"
+authors = ["xanaxpoker <306799745+xanaxpoker@users.noreply.github.com>"]
+
+[lib]
+name = "opensketch_win_core"
+path = "src/lib.rs"
+
+[[bin]]
+name = "opensketch-windows"
+path = "src/bin/opensketch-windows.rs"
+
+[[bin]]
+name = "opensketch-win-cli"
+path = "src/bin/opensketch-win-cli.rs"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+flate2 = "1.1"
+crc32fast = "1.5"
+parking_lot = "0.12"
+tiny_http = "0.12"
+base64 = "0.22"

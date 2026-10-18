@@ -1,0 +1,509 @@
+{
+  "boundary_id": "replacement.opensketch",
+  "coverage": {
+    "evidence_bundle": {
+      "artifacts": [],
+      "providers": [
+        {
+          "id": "clean-room-audit",
+          "name": "Clean-Room Independence Audit",
+          "version": "1.0"
+        },
+        {
+          "id": "ghidra-mcp",
+          "name": "Ghidra Decompiler & IB Decoder",
+          "version": "1.0"
+        },
+        {
+          "id": "macos-bundle",
+          "name": "OpenSketch App Bundle Verifier",
+          "version": "1.0"
+        },
+        {
+          "id": "static-macho",
+          "name": "Mach-O & Ghidra Inspector",
+          "version": "1.0"
+        },
+        {
+          "id": "swift-test-and-ui",
+          "name": "OpenSketch Test & UI Verifier",
+          "version": "1.0"
+        }
+      ],
+      "environments": [],
+      "scenarios": [
+        {
+          "evidence_id": "ev_5386eb777315610bb231cc41303bf592b0c0eeda1f370963165a54e3fac20761",
+          "operation": "verify_clean_install",
+          "authority": "controlled-replay"
+        },
+        {
+          "evidence_id": "ev_77ec80cd3f3b567a4b1144c547cf827019fa332ee31c93a0b97df589a25111d9",
+          "operation": "verify_reconstruction",
+          "authority": "controlled-replay"
+        }
+      ],
+      "captures": [],
+      "unknowns": [],
+      "records": [
+        {
+          "subject": null,
+          "provider": {
+            "id": "static-macho",
+            "name": "Mach-O & Ghidra Inspector",
+            "version": "1.0"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.artifact-inspection",
+          "operation": "inspect_macho",
+          "parameters": {
+            "target": "thin/SketchModel"
+          },
+          "raw_result": null,
+          "normalized_result": {
+            "sha256": "04fcadc9e6f8b34e408b0a4060d02a11f38d261142406866ecec685ada730faa",
+            "classes": 647,
+            "methods": 5552
+          },
+          "confidence": "observed",
+          "authority": "shipped-artifact",
+          "environment": null,
+          "limitations": [],
+          "locations": [],
+          "evidence_links": [],
+          "evidence_id": "ev_159c8ce27c15bcf9272e61090b30aaa1335f5e59c804732fc135e2935699cc53",
+          "relationship_coverage": null
+        },
+        {
+          "subject": null,
+          "provider": {
+            "id": "macos-bundle",
+            "name": "OpenSketch App Bundle Verifier",
+            "version": "1.0"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.package-proof",
+          "operation": "verify_clean_install",
+          "parameters": {
+            "bundle": "OpenSketch/build/OpenSketch.app"
+          },
+          "raw_result": null,
+          "normalized_result": {
+            "launched": true,
+            "window_title": "smart-layout.sketch",
+            "ax_nodes": 360
+          },
+          "confidence": "observed",
+          "authority": "controlled-replay",
+          "environment": null,
+          "limitations": [],
+          "locations": [],
+          "evidence_links": [],
+          "evidence_id": "ev_5386eb777315610bb231cc41303bf592b0c0eeda1f370963165a54e3fac20761",
+          "relationship_coverage": null
+        },
+        {
+          "subject": null,
+          "provider": {
+            "id": "swift-test-and-ui",
+            "name": "OpenSketch Test & UI Verifier",
+            "version": "1.0"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.reconstruction-proof",
+          "operation": "verify_reconstruction",
+          "parameters": {
+            "suite": "OpenSketchTests",
+            "cli": "opensketch-cli",
+            "app": "OpenSketch.app"
+          },
+          "raw_result": null,
+          "normalized_result": {
+            "passed": true,
+            "tests_executed": 7,
+            "failures": 0,
+            "observed_ax_nodes": 360
+          },
+          "confidence": "observed",
+          "authority": "controlled-replay",
+          "environment": null,
+          "limitations": [],
+          "locations": [],
+          "evidence_links": [],
+          "evidence_id": "ev_77ec80cd3f3b567a4b1144c547cf827019fa332ee31c93a0b97df589a25111d9",
+          "relationship_coverage": null
+        },
+        {
+          "subject": null,
+          "provider": {
+            "id": "clean-room-audit",
+            "name": "Clean-Room Independence Audit",
+            "version": "1.0"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.package-proof",
+          "operation": "verify_authority_independence",
+          "parameters": {
+            "target_sha256": "a6afc13397f49b1e52edd8df6b60dfd97b0722240899b012fb0848b9e0997ae3"
+          },
+          "raw_result": null,
+          "normalized_result": {
+            "independent": true,
+            "links_sketch_binaries": false
+          },
+          "confidence": "observed",
+          "authority": "shipped-artifact",
+          "environment": null,
+          "limitations": [],
+          "locations": [],
+          "evidence_links": [],
+          "evidence_id": "ev_9327e39ddf191f2a01d7635e9fd67606b7042723d4c3375e3222e3431c3b16a6",
+          "relationship_coverage": null
+        },
+        {
+          "subject": null,
+          "provider": {
+            "id": "ghidra-mcp",
+            "name": "Ghidra Decompiler & IB Decoder",
+            "version": "1.0"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.surface-discovery",
+          "operation": "discover_surfaces",
+          "parameters": {
+            "nibs": 325,
+            "objc_classes": 2884,
+            "swift_symbols": 6254
+          },
+          "raw_result": null,
+          "normalized_result": {
+            "surfaces": [
+              "archive.v139",
+              "geometry.bezier_boolean",
+              "layout.smart_symbols",
+              "export.svg_png_pdf_css",
+              "ui.workspace_inspector"
+            ]
+          },
+          "confidence": "observed",
+          "authority": "shipped-artifact",
+          "environment": null,
+          "limitations": [],
+          "locations": [],
+          "evidence_links": [],
+          "evidence_id": "ev_ebc9ae79e8b649c6879f82aa1156a0ba0ee20ce32bcc791d523f12e9fb53774f",
+          "relationship_coverage": null
+        }
+      ]
+    },
+    "artifacts": [
+      {
+        "artifact_id": "sketch.82.1",
+        "artifact_sha256": "04fcadc9e6f8b34e408b0a4060d02a11f38d261142406866ecec685ada730faa",
+        "version": "82.1.137007",
+        "environment_sha256": "0ce05aa1e4c44510caf0ceddd42d02f719dbd1ab42c7a2eb8702833bfc508517",
+        "evidence_ids": [
+          "ev_159c8ce27c15bcf9272e61090b30aaa1335f5e59c804732fc135e2935699cc53"
+        ]
+      }
+    ],
+    "surfaces": [
+      {
+        "surface_id": "archive.v139",
+        "family": "persistence",
+        "artifact_id": "sketch.82.1",
+        "occurrence_id": "occ-archive.v139",
+        "location": "MSDocumentZippedJSONReader + MSDocumentWriter",
+        "authority": "observed",
+        "dependency_surface_ids": [],
+        "evidence_ids": [
+          "ev_ebc9ae79e8b649c6879f82aa1156a0ba0ee20ce32bcc791d523f12e9fb53774f"
+        ]
+      },
+      {
+        "surface_id": "geometry.bezier_boolean",
+        "family": "geometry",
+        "artifact_id": "sketch.82.1",
+        "occurrence_id": "occ-geometry.bezier_boolean",
+        "location": "MSBezierBuilder + MSPath booleanOp",
+        "authority": "observed",
+        "dependency_surface_ids": [],
+        "evidence_ids": [
+          "ev_ebc9ae79e8b649c6879f82aa1156a0ba0ee20ce32bcc791d523f12e9fb53774f"
+        ]
+      },
+      {
+        "surface_id": "layout.smart_symbols",
+        "family": "layout",
+        "artifact_id": "sketch.82.1",
+        "occurrence_id": "occ-layout.smart_symbols",
+        "location": "MSImmutableInferredGroupLayout + MSImmutableSymbolInstance",
+        "authority": "observed",
+        "dependency_surface_ids": [],
+        "evidence_ids": [
+          "ev_ebc9ae79e8b649c6879f82aa1156a0ba0ee20ce32bcc791d523f12e9fb53774f"
+        ]
+      },
+      {
+        "surface_id": "export.svg_png_pdf_css",
+        "family": "export",
+        "artifact_id": "sketch.82.1",
+        "occurrence_id": "occ-export.svg_png_pdf_css",
+        "location": "SketchSVGExporter + MSExporter",
+        "authority": "observed",
+        "dependency_surface_ids": [],
+        "evidence_ids": [
+          "ev_ebc9ae79e8b649c6879f82aa1156a0ba0ee20ce32bcc791d523f12e9fb53774f"
+        ]
+      },
+      {
+        "surface_id": "ui.workspace_inspector",
+        "family": "ui",
+        "artifact_id": "sketch.82.1",
+        "occurrence_id": "occ-ui.workspace_inspector",
+        "location": "MSDocumentWindow + MSInspectorController + BCLayerList",
+        "authority": "observed",
+        "dependency_surface_ids": [],
+        "evidence_ids": [
+          "ev_ebc9ae79e8b649c6879f82aa1156a0ba0ee20ce32bcc791d523f12e9fb53774f"
+        ]
+      }
+    ],
+    "owners": [
+      {
+        "surface_id": "archive.v139",
+        "ownership": {
+          "disposition": "implemented",
+          "owner_path": "OpenSketch/Sources/OpenSketchCore/SketchDocumentIO.swift",
+          "owner_export": "SketchDocumentIO",
+          "owner_sha256": "419fd19d8dabe1ede340374817c1af499fb901f862f7bab423f126589f94acd7",
+          "path_state": "present",
+          "package_state": "distributed",
+          "authority_route": "none"
+        }
+      },
+      {
+        "surface_id": "geometry.bezier_boolean",
+        "ownership": {
+          "disposition": "implemented",
+          "owner_path": "OpenSketch/Sources/OpenSketchCore/SketchGeometry.swift",
+          "owner_export": "SketchBooleanEngine",
+          "owner_sha256": "eaf263d3c6fc2fee88395ad1fcb67ffe20ae95549e19cd66a2a500befd271cd9",
+          "path_state": "present",
+          "package_state": "distributed",
+          "authority_route": "none"
+        }
+      },
+      {
+        "surface_id": "layout.smart_symbols",
+        "ownership": {
+          "disposition": "implemented",
+          "owner_path": "OpenSketch/Sources/OpenSketchCore/SketchGeometry.swift",
+          "owner_export": "SketchSmartLayoutEngine",
+          "owner_sha256": "eaf263d3c6fc2fee88395ad1fcb67ffe20ae95549e19cd66a2a500befd271cd9",
+          "path_state": "present",
+          "package_state": "distributed",
+          "authority_route": "none"
+        }
+      },
+      {
+        "surface_id": "export.svg_png_pdf_css",
+        "ownership": {
+          "disposition": "implemented",
+          "owner_path": "OpenSketch/Sources/OpenSketchCore/SketchRenderingEngine.swift",
+          "owner_export": "SketchExporter",
+          "owner_sha256": "98cc78a86e9c5d1da18458a3c977226909c24c5175551f86837f97b3d5c15729",
+          "path_state": "present",
+          "package_state": "distributed",
+          "authority_route": "none"
+        }
+      },
+      {
+        "surface_id": "ui.workspace_inspector",
+        "ownership": {
+          "disposition": "implemented",
+          "owner_path": "OpenSketch/Sources/OpenSketch/MainWorkspaceView.swift",
+          "owner_export": "MainWorkspaceView",
+          "owner_sha256": "9cbaac1aa47181660311eefd740f22b10cb421c8e65b8eaabd11cd0d8a6e7ccf",
+          "path_state": "present",
+          "package_state": "distributed",
+          "authority_route": "none"
+        }
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "claim.archive.v139",
+        "title": "Reconstruct MSDocumentZippedJSONReader + MSDocumentWriter in OpenSketch",
+        "kind": "behavioral",
+        "surface_ids": [
+          "archive.v139"
+        ],
+        "required_dimensions": [
+          "output",
+          "state"
+        ],
+        "required_authority": "controlled-replay"
+      },
+      {
+        "claim_id": "claim.geometry.bezier_boolean",
+        "title": "Reconstruct MSBezierBuilder + MSPath booleanOp in OpenSketch",
+        "kind": "behavioral",
+        "surface_ids": [
+          "geometry.bezier_boolean"
+        ],
+        "required_dimensions": [
+          "output",
+          "state"
+        ],
+        "required_authority": "controlled-replay"
+      },
+      {
+        "claim_id": "claim.layout.smart_symbols",
+        "title": "Reconstruct MSImmutableInferredGroupLayout + MSImmutableSymbolInstance in OpenSketch",
+        "kind": "behavioral",
+        "surface_ids": [
+          "layout.smart_symbols"
+        ],
+        "required_dimensions": [
+          "output",
+          "state"
+        ],
+        "required_authority": "controlled-replay"
+      },
+      {
+        "claim_id": "claim.export.svg_png_pdf_css",
+        "title": "Reconstruct SketchSVGExporter + MSExporter in OpenSketch",
+        "kind": "behavioral",
+        "surface_ids": [
+          "export.svg_png_pdf_css"
+        ],
+        "required_dimensions": [
+          "output",
+          "state"
+        ],
+        "required_authority": "controlled-replay"
+      },
+      {
+        "claim_id": "claim.ui.workspace_inspector",
+        "title": "Reconstruct MSDocumentWindow + MSInspectorController + BCLayerList in OpenSketch",
+        "kind": "behavioral",
+        "surface_ids": [
+          "ui.workspace_inspector"
+        ],
+        "required_dimensions": [
+          "output",
+          "state"
+        ],
+        "required_authority": "controlled-replay"
+      }
+    ],
+    "verifier_contracts": [
+      {
+        "verifier_id": "verify.opensketch.all",
+        "claim_ids": [
+          "claim.archive.v139",
+          "claim.geometry.bezier_boolean",
+          "claim.layout.smart_symbols",
+          "claim.export.svg_png_pdf_css",
+          "claim.ui.workspace_inspector"
+        ],
+        "dimensions": [
+          "output",
+          "state"
+        ],
+        "authority": "controlled-replay",
+        "max_age_ms": 86400000,
+        "minimum_repeats": 2,
+        "normalization_sha256": "8df485f06813084a451b90b9606468efbd5eab84348fbef60893131b523a5c6d",
+        "normalization_removes_dimensions": false,
+        "contract_sha256": "df935c25d67d5987bbf60c67481f3942b9db0211060174d3108791d287a1b4e6"
+      }
+    ],
+    "verifier_results": [
+      {
+        "verifier_id": "verify.opensketch.all",
+        "contract_sha256": "df935c25d67d5987bbf60c67481f3942b9db0211060174d3108791d287a1b4e6",
+        "observed_at": "2026-10-18T09:47:26.000Z",
+        "status": "pass",
+        "covered_claim_ids": [
+          "claim.archive.v139",
+          "claim.geometry.bezier_boolean",
+          "claim.layout.smart_symbols",
+          "claim.export.svg_png_pdf_css",
+          "claim.ui.workspace_inspector"
+        ],
+        "covered_dimensions": [
+          "output",
+          "state"
+        ],
+        "artifact_sha256s": [
+          "04fcadc9e6f8b34e408b0a4060d02a11f38d261142406866ecec685ada730faa"
+        ],
+        "owner_sha256s": [
+          "419fd19d8dabe1ede340374817c1af499fb901f862f7bab423f126589f94acd7",
+          "98cc78a86e9c5d1da18458a3c977226909c24c5175551f86837f97b3d5c15729",
+          "9cbaac1aa47181660311eefd740f22b10cb421c8e65b8eaabd11cd0d8a6e7ccf",
+          "eaf263d3c6fc2fee88395ad1fcb67ffe20ae95549e19cd66a2a500befd271cd9"
+        ],
+        "normalization_sha256": "8df485f06813084a451b90b9606468efbd5eab84348fbef60893131b523a5c6d",
+        "repeats": 2,
+        "evidence_ids": [
+          "ev_77ec80cd3f3b567a4b1144c547cf827019fa332ee31c93a0b97df589a25111d9"
+        ]
+      }
+    ],
+    "residual_unknown_ids": [],
+    "contradictions": [],
+    "package_proofs": [
+      {
+        "proof_id": "proof.clean-install",
+        "kind": "clean-install",
+        "status": "pass",
+        "artifact_sha256s": [
+          "04fcadc9e6f8b34e408b0a4060d02a11f38d261142406866ecec685ada730faa"
+        ],
+        "evidence_ids": [
+          "ev_5386eb777315610bb231cc41303bf592b0c0eeda1f370963165a54e3fac20761"
+        ]
+      },
+      {
+        "proof_id": "proof.authority-independence",
+        "kind": "authority-independence",
+        "status": "pass",
+        "artifact_sha256s": [
+          "04fcadc9e6f8b34e408b0a4060d02a11f38d261142406866ecec685ada730faa"
+        ],
+        "evidence_ids": [
+          "ev_9327e39ddf191f2a01d7635e9fd67606b7042723d4c3375e3222e3431c3b16a6"
+        ]
+      }
+    ],
+    "boundaries": [
+      {
+        "boundary_id": "replacement.opensketch",
+        "title": "OpenSketch macOS Full Reconstruction Boundary",
+        "required_surface_ids": [
+          "archive.v139",
+          "geometry.bezier_boolean",
+          "layout.smart_symbols",
+          "export.svg_png_pdf_css",
+          "ui.workspace_inspector"
+        ],
+        "required_claim_ids": [
+          "claim.archive.v139",
+          "claim.geometry.bezier_boolean",
+          "claim.layout.smart_symbols",
+          "claim.export.svg_png_pdf_css",
+          "claim.ui.workspace_inspector"
+        ],
+        "required_package_proof_kinds": [
+          "clean-install",
+          "authority-independence"
+        ],
+        "allowed_dispositions": [],
+        "allowed_unknown_ids": []
+      }
+    ]
+  }
+}

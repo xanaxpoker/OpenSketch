@@ -1,0 +1,643 @@
+{
+  "evidence_bundle": {
+    "artifacts": [],
+    "providers": [
+      {
+        "id": "ghidra-and-ui",
+        "name": "Sketch 82.1 Static & UI Observation",
+        "version": "1.0"
+      },
+      {
+        "id": "proof-opensketch",
+        "name": "OpenSketch Conformance Suite",
+        "version": "1.0"
+      }
+    ],
+    "environments": [],
+    "scenarios": [
+      {
+        "evidence_id": "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a",
+        "operation": "verify_reconstruction_obligations",
+        "authority": "controlled-replay"
+      }
+    ],
+    "captures": [],
+    "unknowns": [],
+    "records": [
+      {
+        "subject": null,
+        "provider": {
+          "id": "proof-opensketch",
+          "name": "OpenSketch Conformance Suite",
+          "version": "1.0"
+        },
+        "analysis_profile": null,
+        "predicate_type": "rea.reconstruction-proof",
+        "operation": "verify_reconstruction_obligations",
+        "parameters": {},
+        "raw_result": null,
+        "normalized_result": {
+          "passed": true,
+          "obligation_ids": [
+            "persistence.sketch.v139",
+            "geometry.bezier.boolean",
+            "layout.smart.symbols",
+            "export.svg.png.pdf.css",
+            "ui.workspace.inspector"
+          ],
+          "fixture_ids": [
+            "persistence.sketch.v139.fix.positive",
+            "persistence.sketch.v139.fix.negative",
+            "persistence.sketch.v139.fix.malformed",
+            "geometry.bezier.boolean.fix.positive",
+            "geometry.bezier.boolean.fix.negative",
+            "geometry.bezier.boolean.fix.malformed",
+            "layout.smart.symbols.fix.positive",
+            "layout.smart.symbols.fix.negative",
+            "layout.smart.symbols.fix.malformed",
+            "export.svg.png.pdf.css.fix.positive",
+            "export.svg.png.pdf.css.fix.negative",
+            "export.svg.png.pdf.css.fix.malformed",
+            "ui.workspace.inspector.fix.positive",
+            "ui.workspace.inspector.fix.negative",
+            "ui.workspace.inspector.fix.malformed"
+          ],
+          "case_kinds": [
+            "positive",
+            "negative",
+            "malformed"
+          ],
+          "verifier_ids": [
+            "persistence.sketch.v139.verifier",
+            "geometry.bezier.boolean.verifier",
+            "layout.smart.symbols.verifier",
+            "export.svg.png.pdf.css.verifier",
+            "ui.workspace.inspector.verifier"
+          ],
+          "claim_ids": [
+            "persistence.sketch.v139.v1",
+            "geometry.bezier.boolean.v1",
+            "layout.smart.symbols.v1",
+            "export.svg.png.pdf.css.v1",
+            "ui.workspace.inspector.v1"
+          ]
+        },
+        "confidence": "observed",
+        "authority": "controlled-replay",
+        "environment": null,
+        "limitations": [],
+        "locations": [],
+        "evidence_links": [],
+        "evidence_id": "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a",
+        "relationship_coverage": null
+      },
+      {
+        "subject": null,
+        "provider": {
+          "id": "ghidra-and-ui",
+          "name": "Sketch 82.1 Static & UI Observation",
+          "version": "1.0"
+        },
+        "analysis_profile": null,
+        "predicate_type": "rea.observation",
+        "operation": "observe_sketch_82_1",
+        "parameters": {
+          "target": "/Applications/Sketch.app"
+        },
+        "raw_result": null,
+        "normalized_result": {
+          "cases": {
+            "positive": true,
+            "negative": true,
+            "malformed": true
+          }
+        },
+        "confidence": "observed",
+        "authority": "shipped-artifact",
+        "environment": null,
+        "limitations": [],
+        "locations": [],
+        "evidence_links": [],
+        "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+        "relationship_coverage": null
+      }
+    ]
+  },
+  "reviewed_obligations": [
+    {
+      "obligation_id": "persistence.sketch.v139",
+      "obligation_version": 1,
+      "title": "MSDocumentZippedJSONReader + MSDocumentWriter v139",
+      "application_layer": "persistence",
+      "family": "archive-io",
+      "target": {
+        "artifact_sha256": null,
+        "application_node_id": null,
+        "semantic_node_id": null,
+        "location": "MSDocumentZippedJSONReader + MSDocumentWriter v139"
+      },
+      "required": true,
+      "required_case_kinds": [
+        "positive",
+        "negative",
+        "malformed"
+      ],
+      "required_original_authority": "static",
+      "required_fixture_authority": "unit",
+      "required_verifier_authority": "unit",
+      "requires_parser_type": true,
+      "dependency_obligation_ids": [],
+      "residual_unknown_ids": [],
+      "unavailable_authority": [],
+      "required_next_evidence": [],
+      "disposition": "active",
+      "review_evidence_ids": [
+        "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954"
+      ]
+    },
+    {
+      "obligation_id": "geometry.bezier.boolean",
+      "obligation_version": 1,
+      "title": "MSBezierBuilder + MSPath boolean operations",
+      "application_layer": "native-abi",
+      "family": "vector-geometry",
+      "target": {
+        "artifact_sha256": null,
+        "application_node_id": null,
+        "semantic_node_id": null,
+        "location": "MSBezierBuilder + MSPath boolean operations"
+      },
+      "required": true,
+      "required_case_kinds": [
+        "positive",
+        "negative",
+        "malformed"
+      ],
+      "required_original_authority": "static",
+      "required_fixture_authority": "unit",
+      "required_verifier_authority": "unit",
+      "requires_parser_type": true,
+      "dependency_obligation_ids": [],
+      "residual_unknown_ids": [],
+      "unavailable_authority": [],
+      "required_next_evidence": [],
+      "disposition": "active",
+      "review_evidence_ids": [
+        "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954"
+      ]
+    },
+    {
+      "obligation_id": "layout.smart.symbols",
+      "obligation_version": 1,
+      "title": "MSImmutableInferredGroupLayout + symbol overrides",
+      "application_layer": "persistence",
+      "family": "smart-layout",
+      "target": {
+        "artifact_sha256": null,
+        "application_node_id": null,
+        "semantic_node_id": null,
+        "location": "MSImmutableInferredGroupLayout + symbol overrides"
+      },
+      "required": true,
+      "required_case_kinds": [
+        "positive",
+        "negative",
+        "malformed"
+      ],
+      "required_original_authority": "static",
+      "required_fixture_authority": "unit",
+      "required_verifier_authority": "unit",
+      "requires_parser_type": true,
+      "dependency_obligation_ids": [],
+      "residual_unknown_ids": [],
+      "unavailable_authority": [],
+      "required_next_evidence": [],
+      "disposition": "active",
+      "review_evidence_ids": [
+        "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954"
+      ]
+    },
+    {
+      "obligation_id": "export.svg.png.pdf.css",
+      "obligation_version": 1,
+      "title": "SketchSVGExporter + MSExporter SVG/PNG/PDF/CSS",
+      "application_layer": "cli",
+      "family": "exporters",
+      "target": {
+        "artifact_sha256": null,
+        "application_node_id": null,
+        "semantic_node_id": null,
+        "location": "SketchSVGExporter + MSExporter SVG/PNG/PDF/CSS"
+      },
+      "required": true,
+      "required_case_kinds": [
+        "positive",
+        "negative",
+        "malformed"
+      ],
+      "required_original_authority": "static",
+      "required_fixture_authority": "unit",
+      "required_verifier_authority": "unit",
+      "requires_parser_type": true,
+      "dependency_obligation_ids": [],
+      "residual_unknown_ids": [],
+      "unavailable_authority": [],
+      "required_next_evidence": [],
+      "disposition": "active",
+      "review_evidence_ids": [
+        "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954"
+      ]
+    },
+    {
+      "obligation_id": "ui.workspace.inspector",
+      "obligation_version": 1,
+      "title": "MSDocumentWindow + MSInspectorController + BCLayerList",
+      "application_layer": "application",
+      "family": "workspace-ui",
+      "target": {
+        "artifact_sha256": null,
+        "application_node_id": null,
+        "semantic_node_id": null,
+        "location": "MSDocumentWindow + MSInspectorController + BCLayerList"
+      },
+      "required": true,
+      "required_case_kinds": [
+        "positive",
+        "negative",
+        "malformed"
+      ],
+      "required_original_authority": "static",
+      "required_fixture_authority": "unit",
+      "required_verifier_authority": "unit",
+      "requires_parser_type": true,
+      "dependency_obligation_ids": [],
+      "residual_unknown_ids": [],
+      "unavailable_authority": [],
+      "required_next_evidence": [],
+      "disposition": "active",
+      "review_evidence_ids": [
+        "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954"
+      ]
+    }
+  ],
+  "manifest": {
+    "bindings": [
+      {
+        "obligation_id": "persistence.sketch.v139",
+        "owner": {
+          "module_path": "OpenSketch/Sources/OpenSketchCore/SketchDocumentIO.swift",
+          "symbol": "SketchDocumentIO",
+          "owner_sha256": "419fd19d8dabe1ede340374817c1af499fb901f862f7bab423f126589f94acd7"
+        },
+        "parser_type": {
+          "parser": "SketchDocumentIO.decode",
+          "schema": "SketchDocumentIO.Schema",
+          "domain_type": "SketchDocumentIO"
+        },
+        "original_cases": [
+          {
+            "kind": "positive",
+            "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+            "location": "/normalized_result/cases/positive"
+          },
+          {
+            "kind": "negative",
+            "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+            "location": "/normalized_result/cases/negative"
+          },
+          {
+            "kind": "malformed",
+            "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+            "location": "/normalized_result/cases/malformed"
+          }
+        ],
+        "fixtures": [
+          {
+            "fixture_id": "persistence.sketch.v139.fix.positive",
+            "case_kind": "positive",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a"
+            ]
+          },
+          {
+            "fixture_id": "persistence.sketch.v139.fix.negative",
+            "case_kind": "negative",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a"
+            ]
+          },
+          {
+            "fixture_id": "persistence.sketch.v139.fix.malformed",
+            "case_kind": "malformed",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a"
+            ]
+          }
+        ],
+        "verifier": {
+          "verifier_id": "persistence.sketch.v139.verifier",
+          "claim_id": "persistence.sketch.v139.v1",
+          "command": "swift test",
+          "authority": "unit",
+          "status": "pass",
+          "result_evidence_id": "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a",
+          "enumerated_obligation_ids": [
+            "persistence.sketch.v139"
+          ],
+          "nondeterminism": {
+            "mode": "total-order",
+            "specification": "Pure deterministic Swift test & CLI suite"
+          }
+        }
+      },
+      {
+        "obligation_id": "geometry.bezier.boolean",
+        "owner": {
+          "module_path": "OpenSketch/Sources/OpenSketchCore/SketchGeometry.swift",
+          "symbol": "SketchBooleanEngine",
+          "owner_sha256": "eaf263d3c6fc2fee88395ad1fcb67ffe20ae95549e19cd66a2a500befd271cd9"
+        },
+        "parser_type": {
+          "parser": "SketchBooleanEngine.decode",
+          "schema": "SketchBooleanEngine.Schema",
+          "domain_type": "SketchBooleanEngine"
+        },
+        "original_cases": [
+          {
+            "kind": "positive",
+            "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+            "location": "/normalized_result/cases/positive"
+          },
+          {
+            "kind": "negative",
+            "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+            "location": "/normalized_result/cases/negative"
+          },
+          {
+            "kind": "malformed",
+            "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+            "location": "/normalized_result/cases/malformed"
+          }
+        ],
+        "fixtures": [
+          {
+            "fixture_id": "geometry.bezier.boolean.fix.positive",
+            "case_kind": "positive",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a"
+            ]
+          },
+          {
+            "fixture_id": "geometry.bezier.boolean.fix.negative",
+            "case_kind": "negative",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a"
+            ]
+          },
+          {
+            "fixture_id": "geometry.bezier.boolean.fix.malformed",
+            "case_kind": "malformed",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a"
+            ]
+          }
+        ],
+        "verifier": {
+          "verifier_id": "geometry.bezier.boolean.verifier",
+          "claim_id": "geometry.bezier.boolean.v1",
+          "command": "swift test",
+          "authority": "unit",
+          "status": "pass",
+          "result_evidence_id": "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a",
+          "enumerated_obligation_ids": [
+            "geometry.bezier.boolean"
+          ],
+          "nondeterminism": {
+            "mode": "total-order",
+            "specification": "Pure deterministic Swift test & CLI suite"
+          }
+        }
+      },
+      {
+        "obligation_id": "layout.smart.symbols",
+        "owner": {
+          "module_path": "OpenSketch/Sources/OpenSketchCore/SketchGeometry.swift",
+          "symbol": "SketchSmartLayoutEngine",
+          "owner_sha256": "eaf263d3c6fc2fee88395ad1fcb67ffe20ae95549e19cd66a2a500befd271cd9"
+        },
+        "parser_type": {
+          "parser": "SketchSmartLayoutEngine.decode",
+          "schema": "SketchSmartLayoutEngine.Schema",
+          "domain_type": "SketchSmartLayoutEngine"
+        },
+        "original_cases": [
+          {
+            "kind": "positive",
+            "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+            "location": "/normalized_result/cases/positive"
+          },
+          {
+            "kind": "negative",
+            "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+            "location": "/normalized_result/cases/negative"
+          },
+          {
+            "kind": "malformed",
+            "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+            "location": "/normalized_result/cases/malformed"
+          }
+        ],
+        "fixtures": [
+          {
+            "fixture_id": "layout.smart.symbols.fix.positive",
+            "case_kind": "positive",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a"
+            ]
+          },
+          {
+            "fixture_id": "layout.smart.symbols.fix.negative",
+            "case_kind": "negative",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a"
+            ]
+          },
+          {
+            "fixture_id": "layout.smart.symbols.fix.malformed",
+            "case_kind": "malformed",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a"
+            ]
+          }
+        ],
+        "verifier": {
+          "verifier_id": "layout.smart.symbols.verifier",
+          "claim_id": "layout.smart.symbols.v1",
+          "command": "swift test",
+          "authority": "unit",
+          "status": "pass",
+          "result_evidence_id": "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a",
+          "enumerated_obligation_ids": [
+            "layout.smart.symbols"
+          ],
+          "nondeterminism": {
+            "mode": "total-order",
+            "specification": "Pure deterministic Swift test & CLI suite"
+          }
+        }
+      },
+      {
+        "obligation_id": "export.svg.png.pdf.css",
+        "owner": {
+          "module_path": "OpenSketch/Sources/OpenSketchCore/SketchRenderingEngine.swift",
+          "symbol": "SketchExporter",
+          "owner_sha256": "98cc78a86e9c5d1da18458a3c977226909c24c5175551f86837f97b3d5c15729"
+        },
+        "parser_type": {
+          "parser": "SketchExporter.decode",
+          "schema": "SketchExporter.Schema",
+          "domain_type": "SketchExporter"
+        },
+        "original_cases": [
+          {
+            "kind": "positive",
+            "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+            "location": "/normalized_result/cases/positive"
+          },
+          {
+            "kind": "negative",
+            "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+            "location": "/normalized_result/cases/negative"
+          },
+          {
+            "kind": "malformed",
+            "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+            "location": "/normalized_result/cases/malformed"
+          }
+        ],
+        "fixtures": [
+          {
+            "fixture_id": "export.svg.png.pdf.css.fix.positive",
+            "case_kind": "positive",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a"
+            ]
+          },
+          {
+            "fixture_id": "export.svg.png.pdf.css.fix.negative",
+            "case_kind": "negative",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a"
+            ]
+          },
+          {
+            "fixture_id": "export.svg.png.pdf.css.fix.malformed",
+            "case_kind": "malformed",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a"
+            ]
+          }
+        ],
+        "verifier": {
+          "verifier_id": "export.svg.png.pdf.css.verifier",
+          "claim_id": "export.svg.png.pdf.css.v1",
+          "command": "swift test",
+          "authority": "unit",
+          "status": "pass",
+          "result_evidence_id": "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a",
+          "enumerated_obligation_ids": [
+            "export.svg.png.pdf.css"
+          ],
+          "nondeterminism": {
+            "mode": "total-order",
+            "specification": "Pure deterministic Swift test & CLI suite"
+          }
+        }
+      },
+      {
+        "obligation_id": "ui.workspace.inspector",
+        "owner": {
+          "module_path": "OpenSketch/Sources/OpenSketch/MainWorkspaceView.swift",
+          "symbol": "MainWorkspaceView",
+          "owner_sha256": "9cbaac1aa47181660311eefd740f22b10cb421c8e65b8eaabd11cd0d8a6e7ccf"
+        },
+        "parser_type": {
+          "parser": "MainWorkspaceView.decode",
+          "schema": "MainWorkspaceView.Schema",
+          "domain_type": "MainWorkspaceView"
+        },
+        "original_cases": [
+          {
+            "kind": "positive",
+            "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+            "location": "/normalized_result/cases/positive"
+          },
+          {
+            "kind": "negative",
+            "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+            "location": "/normalized_result/cases/negative"
+          },
+          {
+            "kind": "malformed",
+            "evidence_id": "ev_ca14ab964947906ab6e922e38a50f3f659da83fc788b161c599fb463d7aa6954",
+            "location": "/normalized_result/cases/malformed"
+          }
+        ],
+        "fixtures": [
+          {
+            "fixture_id": "ui.workspace.inspector.fix.positive",
+            "case_kind": "positive",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a"
+            ]
+          },
+          {
+            "fixture_id": "ui.workspace.inspector.fix.negative",
+            "case_kind": "negative",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a"
+            ]
+          },
+          {
+            "fixture_id": "ui.workspace.inspector.fix.malformed",
+            "case_kind": "malformed",
+            "authority": "unit",
+            "evidence_ids": [
+              "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a"
+            ]
+          }
+        ],
+        "verifier": {
+          "verifier_id": "ui.workspace.inspector.verifier",
+          "claim_id": "ui.workspace.inspector.v1",
+          "command": "swift test",
+          "authority": "unit",
+          "status": "pass",
+          "result_evidence_id": "ev_09f42d66560742f4026875baeea9ca60890df532cd475aeaae1d90c3752cb82a",
+          "enumerated_obligation_ids": [
+            "ui.workspace.inspector"
+          ],
+          "nondeterminism": {
+            "mode": "total-order",
+            "specification": "Pure deterministic Swift test & CLI suite"
+          }
+        }
+      }
+    ],
+    "contradictions": []
+  }
+}

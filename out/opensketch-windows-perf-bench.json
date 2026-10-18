@@ -1,0 +1,56 @@
+{
+  "all_passed": true,
+  "passed_count": 6,
+  "total_checks": 6,
+  "checks": [
+    {
+      "name": "document_archive_load",
+      "title": "ZIP Archive Load & Model Decode",
+      "measured_ms": 20.827125,
+      "budget_ms": 250.0,
+      "passed": true,
+      "detail": "Loaded 2 pages & 14 images in 20.83 ms"
+    },
+    {
+      "name": "warm_canvas_frame_render",
+      "title": "Warm Full-Canvas Render (120 FPS Target)",
+      "measured_ms": 0.329708,
+      "budget_ms": 8.33,
+      "passed": true,
+      "detail": "Drew 312 layers in 0.33 ms (58 cache hits)"
+    },
+    {
+      "name": "continuous_60_frame_pan_zoom",
+      "title": "60-Frame Continuous Pan/Zoom Stress Test",
+      "measured_ms": 0.11747846666666667,
+      "budget_ms": 6.0,
+      "passed": true,
+      "detail": "Avg: 0.12 ms/frame, P95: 0.27 ms/frame (120 FPS)"
+    },
+    {
+      "name": "viewport_frustum_culling",
+      "title": "Viewport Frustum Culling Efficiency",
+      "measured_ms": 0.019458,
+      "budget_ms": 4.0,
+      "passed": true,
+      "detail": "Drew 19 layers, culled 156 off-screen layers in 0.02 ms"
+    },
+    {
+      "name": "symbol_master_smart_layout_cache",
+      "title": "O(1) Symbol Master & Smart Layout Cache (20x)",
+      "measured_ms": 3.118042,
+      "budget_ms": 5.0,
+      "passed": true,
+      "detail": "Expanded 1360 symbol ops in 3.118 ms (2099 cache hits)"
+    },
+    {
+      "name": "interactive_hit_test_and_snap",
+      "title": "Interactive Drag Snapping (100 ticks)",
+      "measured_ms": 0.005208,
+      "budget_ms": 4.0,
+      "passed": true,
+      "detail": "100 snap evaluations in 0.005 ms (0.0001 ms/tick)"
+    }
+  ],
+  "summary_line": "Perf Checks: 6/6 PASSED | Warm Frame: 0.33 ms (120 FPS) | 60-Frame Pan/Zoom Avg: 0.12 ms"
+}
